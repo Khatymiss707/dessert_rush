@@ -3,7 +3,177 @@ guid: cf24831702a562b4282ff571af1dd724
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface26
+    second: {fileID: 2100000, guid: 8afc7596a3508844f8482890cf9ed217, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blush
+    second: {fileID: 2100000, guid: 3db7e808525b07a44a19b7040dd6bc01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bouche
+    second: {fileID: 2100000, guid: fd44c8f2625d5b84ab469bdc8d66c833, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bouteille_fraise
+    second: {fileID: 2100000, guid: 3604984cb8311c542b9f3f0645a5a08b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bouteille_mangue
+    second: {fileID: 2100000, guid: 3e0b20acd55359742ae773280b90bd6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bouteille_oreo
+    second: {fileID: 2100000, guid: 8baeb8a5ab38d2c48a8c402284915e92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: btn_gris
+    second: {fileID: 2100000, guid: a31f43869290ce644bc76c9c5a0f0b11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chocolate_filling
+    second: {fileID: 2100000, guid: 17c2b217d1592204cbb6d5049dde9e6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: client_bleu
+    second: {fileID: 2100000, guid: dcb76768cf6709140b07e9214c13ec64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: client_mauve
+    second: {fileID: 2100000, guid: 2eea350063984c84aae2d5c232170449, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: client_rouge
+    second: {fileID: 2100000, guid: 4456509f13d12e04088792d37a067909, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: client_vert
+    second: {fileID: 2100000, guid: 0b38773479469554e9d7401e6c1fe9ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: container_box
+    second: {fileID: 2100000, guid: c5351a7339800fd439995378da63843a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: filling_rose
+    second: {fileID: 2100000, guid: 0c190687fa5fcc543bd27ee9fc42f8ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: filling_vanille
+    second: {fileID: 2100000, guid: 5ff76f3294070374785efe14bfceb980, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: machine_ice
+    second: {fileID: 2100000, guid: 7f9f0ec4beef27a4cb211b0a206b04e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mini_fridge
+    second: {fileID: 2100000, guid: 8c045183362d94e428c72e675f0d014d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mochi_matcha
+    second: {fileID: 2100000, guid: fa4df7b85f2bee54390db669dee7f1c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mochi_matcha_filling
+    second: {fileID: 2100000, guid: 5ac4be1a06ef4094b9162c77234b1900, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mochi_rose
+    second: {fileID: 2100000, guid: f63f5488bab20e149b0229a2b560c277, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mochi_vanilla
+    second: {fileID: 2100000, guid: 0ed203b1d505f704db61694831f0a44e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: noir
+    second: {fileID: 2100000, guid: 10fd746b0d131254984201def753e39c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pandan_layer01
+    second: {fileID: 2100000, guid: 4137b108a2788a14d880462a67fdc271, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pandan_layer02
+    second: {fileID: 2100000, guid: 2abeb47e3807cc845b6c7872fba11ac3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pandan_layer03
+    second: {fileID: 2100000, guid: d3a1ce8ee57b33a43b416ab29bbf668d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pandan_layer04
+    second: {fileID: 2100000, guid: e8aeac543faaa2d4197153937e5ecb49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pandan_layer06
+    second: {fileID: 2100000, guid: ba3945cab31a8a44d8f884f157609be5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: poudre_oreo
+    second: {fileID: 2100000, guid: eefc79e12c0c7ce4d81b6a02edb95f4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sucre
+    second: {fileID: 2100000, guid: ab9dfce1e01c01b47accba6e77d2bc2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tableau_noir
+    second: {fileID: 2100000, guid: 44a93b948f4353247be27cf6117be3d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: taro
+    second: {fileID: 2100000, guid: 22aaf815dc074ba4bae698864b96d314, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: visage
+    second: {fileID: 2100000, guid: 4f9f368024014c34aa0f7319d8372b5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vitre_texture
+    second: {fileID: 2100000, guid: 5e621317010770a43b117de6455cc7dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yeux
+    second: {fileID: 2100000, guid: 518a957d875783c469a015b9293576f4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
