@@ -2111,7 +2111,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 224ae1434e762df4db49cc2a9c24f74b, type: 2}
+      objectReference: {fileID: 2100000, guid: aae7cb294f82d2144a750f14ba673362, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c1e511757c27143bf1d081c85b801f,
         type: 3}
       propertyPath: m_Name
@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 3467940351809438587}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -2598,6 +2598,18 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 1585854893}
   m_SourcePrefab: {fileID: 100100000, guid: 05531c60e5ecdd94f857c3e393b8cbaa, type: 3}
+--- !u!114 &3467940351809438587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8402210687987561946, guid: 05531c60e5ecdd94f857c3e393b8cbaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3467940351809438586}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
