@@ -23,6 +23,10 @@ public class control : MonoBehaviour
 
     public void reussite()
     {
-       
+        StartCoroutine("first_client");
     } 
+    public void failure()
+    {
+        StartCoroutine("first_client");
+    }
 }
