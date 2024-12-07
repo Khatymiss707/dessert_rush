@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: client_red_happy
+  m_Name: happy_controller
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
