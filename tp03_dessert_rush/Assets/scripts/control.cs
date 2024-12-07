@@ -17,16 +17,22 @@ public class control : MonoBehaviour
         yield return new WaitForSeconds(8);
         int xcount = Random.Range(1, 5);
         client_actuel = client[xcount];
-        client[xcount].GetComponent<Animator>().Play("nom_anim");
+        client[xcount].GetComponent<Animator>().Play("comming");
         yield break;
     }
 
     public void reussite()
     {
+        client_actuel.GetComponent<Animator>().Play("fuck off");
         StartCoroutine("first_client");
+
+
     } 
     public void failure()
     {
+        client_actuel.GetComponent<Animator>().Play("fuck off");
         StartCoroutine("first_client");
+
+
     }
 }
