@@ -29,7 +29,6 @@ public class control : MonoBehaviour
         client_actuel.GetComponent<Animator>().Play("leaving");
         StartCoroutine("first_client");
 
-
     } 
     public void failure()
     {

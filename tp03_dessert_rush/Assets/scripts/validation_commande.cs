@@ -9,6 +9,7 @@ public class validation_commande : MonoBehaviour
     public GameObject mangues;
     public GameObject chocolat;
     public GameObject matcha;
+    public GameObject pandan;
     public void OnTriggerEnter(Collider other)
     {
         if(other.tag == script.client_actuel.tag)
@@ -18,6 +19,7 @@ public class validation_commande : MonoBehaviour
             mangues.SetActive(false);
             chocolat.SetActive(false);
             matcha.SetActive(false);
+            pandan.SetActive(false);
         }
         else { 
             script.failure();
@@ -25,6 +27,7 @@ public class validation_commande : MonoBehaviour
             mangues.SetActive(false);
             chocolat.SetActive(false);
             matcha.SetActive(false);
+            pandan.SetActive(false);
         }
     }
 }
