@@ -8,6 +8,7 @@ public class mochi_chocolat : MonoBehaviour
     public GameObject mangues;
     public GameObject chocolat;
     public GameObject matcha;
+    public GameObject pandan;
     public Transform spawnPoint;
 
 
@@ -20,16 +21,20 @@ public class mochi_chocolat : MonoBehaviour
     {
         Instantiate(mangues, spawnPoint);
 
-
     }        
     
     public void apparitionfraise()
-        {
-            Instantiate(fraise, spawnPoint);
-        }
+    {
+       Instantiate(fraise, spawnPoint);
+    }
 
     public void apparitionMatcha()
     {
         Instantiate(matcha, spawnPoint);
+    }
+
+    public void apparitionPandan()
+    {
+        Instantiate(pandan, spawnPoint);
     }
 }
