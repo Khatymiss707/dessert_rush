@@ -5,23 +5,24 @@ using UnityEngine;
 public class control : MonoBehaviour
 {
     // Store the client models (with different colors and states)
-    public GameObject[] clientNeutral; // All neutral models (marche_entree)
+    public GameObject[] clientNeutral;  // All neutral models (marche_entree)
     public GameObject[] clientOrdering; // All ordering models (ordering)
-    public GameObject[] clientHappy; // All happy models
-    public GameObject[] clientMad; // All mad models
+    public GameObject[] clientHappy;    // All happy models
+    public GameObject[] clientMad;      // All mad models
 
-    public GameObject client_actuel; // The currently active client model (neutral, ordering, happy, or mad)
+    public GameObject client_actuel;    // The currently active client model (neutral, ordering, happy, or mad)
 
     private void Start()
     {
         StartCoroutine("first_client");
     }
 
+    // The initial client selection and animation sequence
     public IEnumerator first_client()
     {
         yield return new WaitForSeconds(8);  // Wait for 8 seconds before selecting the first client
 
-        // Randomly select a client (color model) from the array (0 to 3 for 4 different colors)
+        // Randomly select a model (color) from the array (0 to 3 for 4 different colors)
         int xcount = Random.Range(0, 4); // Randomly pick a model from 0 to 3 (4 different colors)
 
         // Start with the Neutral model (marche_entree animation)
@@ -83,6 +84,7 @@ public class control : MonoBehaviour
         }
     }
 
+    // Method for the success path: Transition to the Happy model and play success animations
     public IEnumerator reussite()
     {
         // Success path: Transition to Happy model and play success animations
@@ -112,6 +114,7 @@ public class control : MonoBehaviour
         StartCoroutine("first_client");
     }
 
+    // Method for the failure path: Transition to the Mad model and play failure animations
     public IEnumerator failure()
     {
         // Failure path: Transition to Mad model and play failure animations
@@ -141,7 +144,6 @@ public class control : MonoBehaviour
         StartCoroutine("first_client");
     }
 
-
     // Helper method to get the index of the color model
     private int GetColorIndexFromClient(GameObject client)
     {
@@ -152,7 +154,6 @@ public class control : MonoBehaviour
                 return i;
             }
         }
-        return -1;  // Default fallback
+        return -1;  // Default fallback (though this should never happen if all models are correctly assigned)
     }
 }
-
