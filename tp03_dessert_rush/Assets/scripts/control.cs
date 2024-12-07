@@ -7,6 +7,7 @@ public class control : MonoBehaviour
     public GameObject[] client;
     public GameObject client_actuel;
 
+
     private void Start()
     {
         StartCoroutine("first_client");
@@ -21,6 +22,7 @@ public class control : MonoBehaviour
         client[xcount].GetComponent<Animator>().Play("ordering");
         yield break;
     }
+
 
     public void reussite()
     {

@@ -6,25 +6,30 @@ public class validation_commande : MonoBehaviour
 {
     public control script;
     public GameObject fraise;
-    public GameObject mangues;
+    public GameObject vanille;
     public GameObject chocolat;
     public GameObject matcha;
+
+    public IEnumerator mochi_despawn()
+    {
+        yield return new WaitForSeconds(3);
+        fraise.SetActive(false);
+        chocolat.SetActive(false);
+        vanille.SetActive(false);
+        matcha.SetActive(false);
+        yield break;
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if(other.tag == script.client_actuel.tag)
         {
             script.reussite();
-            fraise.SetActive(false);
-            mangues.SetActive(false);
-            chocolat.SetActive(false);
-            matcha.SetActive(false);
+            StartCoroutine("mochi_despawn");
         }
         else { 
             script.failure();
-            fraise.SetActive(false);
-            mangues.SetActive(false);
-            chocolat.SetActive(false);
-            matcha.SetActive(false);
+            StartCoroutine("mochi_despawn");
         }
     }
 }
