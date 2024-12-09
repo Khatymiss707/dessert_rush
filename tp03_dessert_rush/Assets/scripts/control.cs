@@ -9,6 +9,8 @@ public class control : MonoBehaviour
     public GameObject[] clientOrdering; // All ordering models (ordering)
     public GameObject[] clientHappy;    // All happy models
     public GameObject[] clientMad;      // All mad models
+    private int xcount;
+    private bool stop;
 
     public GameObject client_actuel;    // The currently active client model (neutral, ordering, happy, or mad)
 
@@ -20,13 +22,14 @@ public class control : MonoBehaviour
     // The initial client selection and animation sequence
     public IEnumerator first_client()
     {
-        yield return new WaitForSeconds(8);  // Wait for 8 seconds before selecting the first client
+        yield return new WaitForSeconds(5);  // Wait for 8 seconds before selecting the first client
 
         // Randomly select a model (color) from the array (0 to 3 for 4 different colors)
-        int xcount = Random.Range(0, 4); // Randomly pick a model from 0 to 3 (4 different colors)
+        xcount = Random.Range(0, 4); // Randomly pick a model from 0 to 3 (4 different colors)
 
         // Start with the Neutral model (marche_entree animation)
         client_actuel = clientNeutral[xcount];  // Assign the selected neutral model
+        
         client_actuel.SetActive(true);  // Enable the neutral model
 
         // Disable all other clients to ensure only one plays animation
@@ -44,12 +47,13 @@ public class control : MonoBehaviour
 
         // Now activate the Ordering model (play "ordering" animation)
         client_actuel = clientOrdering[xcount];  // Select the corresponding ordering model
+       
         client_actuel.SetActive(true);  // Enable the ordering model
 
         // Play the "ordering" animation for the selected ordering model
         currentAnimator = client_actuel.GetComponent<Animator>();
         currentAnimator.Play("ordering");
-        yield return new WaitForSeconds(currentAnimator.GetCurrentAnimatorStateInfo(0).length);  // Wait until the animation finishes
+       // yield return new WaitForSeconds(currentAnimator.GetCurrentAnimatorStateInfo(0).length);  // Wait until the animation finishes
 
         yield break;
     }
@@ -84,63 +88,65 @@ public class control : MonoBehaviour
         }
     }
 
-    // Method for the success path: Transition to the Happy model and play success animations
-    public IEnumerator reussite()
+    public void reussite()
     {
-        // Success path: Transition to Happy model and play success animations
-        Animator currentAnimator = client_actuel.GetComponent<Animator>();
+        if(stop == false)
+        {
+            stop = true;
+            StartCoroutine("reussiteCo");
+        }
+        
+    }
+
+    public void failure()
+    {
+           if(stop == false)
+        {
+            stop = true;    
+            StartCoroutine("failureCo");
+        }
+    }
+
+    // Method for the success path: Transition to the Happy model and play success animations
+    public IEnumerator reussiteCo()
+    {    
 
         // Hide the current model (Neutral or Ordering)
         client_actuel.SetActive(false);
-
-        // Find and activate the Happy model
-        int xcount = GetColorIndexFromClient(client_actuel);
+       
         client_actuel = clientHappy[xcount];  // Set the new Happy model
         client_actuel.SetActive(true);  // Show Happy model
 
-        // Play happy success animation
-        currentAnimator = client_actuel.GetComponent<Animator>();
+        Animator currentAnimator = client_actuel.GetComponent<Animator>();
+       
         currentAnimator.Play("happy_jump");
         yield return new WaitForSeconds(currentAnimator.GetCurrentAnimatorStateInfo(0).length);  // Wait until animation finishes
 
-        // Play "tourne" and "leaving" animations sequentially
-        currentAnimator.Play("tourne");
-        yield return new WaitForSeconds(currentAnimator.GetCurrentAnimatorStateInfo(0).length);
-
-        currentAnimator.Play("leaving");
-        yield return new WaitForSeconds(currentAnimator.GetCurrentAnimatorStateInfo(0).length);
-
         // Continue with the sequence
+        stop = false; 
         StartCoroutine("first_client");
     }
 
     // Method for the failure path: Transition to the Mad model and play failure animations
-    public IEnumerator failure()
+    public IEnumerator failureCo()
     {
         // Failure path: Transition to Mad model and play failure animations
-        Animator currentAnimator = client_actuel.GetComponent<Animator>();
+       
 
         // Hide the current model (Neutral or Ordering)
         client_actuel.SetActive(false);
 
-        // Find and activate the Mad model
-        int xcount = GetColorIndexFromClient(client_actuel);
+       
         client_actuel = clientMad[xcount];  // Set the new Mad model
         client_actuel.SetActive(true);  // Show Mad model
 
-        // Play the "mad" animation for failure
-        currentAnimator = client_actuel.GetComponent<Animator>();
+        Animator currentAnimator = client_actuel.GetComponent<Animator>();
+      
         currentAnimator.Play("mad");  // Play the "mad" animation (for failure)
         yield return new WaitForSeconds(currentAnimator.GetCurrentAnimatorStateInfo(0).length);  // Wait until animation finishes
 
-        // Play "tourne" and "leaving" animations sequentially
-        currentAnimator.Play("tourne");
-        yield return new WaitForSeconds(currentAnimator.GetCurrentAnimatorStateInfo(0).length);
-
-        currentAnimator.Play("leaving");
-        yield return new WaitForSeconds(currentAnimator.GetCurrentAnimatorStateInfo(0).length);
-
         // Continue with the sequence
+        stop = false;
         StartCoroutine("first_client");
     }
 

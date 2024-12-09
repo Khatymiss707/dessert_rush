@@ -5,18 +5,12 @@ using UnityEngine;
 public class validation_commande : MonoBehaviour
 {
     public control script;
-    public GameObject fraise;
-    public GameObject vanille;
-    public GameObject chocolat;
-    public GameObject matcha;
 
-    public IEnumerator mochi_despawn()
+
+    public IEnumerator mochi_despawn(GameObject mochi)
     {
         yield return new WaitForSeconds(3);
-        fraise.SetActive(false);
-        chocolat.SetActive(false);
-        vanille.SetActive(false);
-        matcha.SetActive(false);
+        Destroy(mochi);
         yield break;
     }
 
@@ -25,11 +19,12 @@ public class validation_commande : MonoBehaviour
         if(other.tag == script.client_actuel.tag)
         {
             script.reussite();
-            StartCoroutine("mochi_despawn");
+            StartCoroutine("mochi_despawn", other.gameObject);
         }
         else { 
             script.failure();
-            StartCoroutine("mochi_despawn");
+            StartCoroutine("mochi_despawn", other.gameObject);
+
         }
     }
 }
