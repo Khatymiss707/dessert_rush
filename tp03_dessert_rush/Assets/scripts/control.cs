@@ -150,16 +150,4 @@ public class control : MonoBehaviour
         StartCoroutine("first_client");
     }
 
-    // Helper method to get the index of the color model
-    private int GetColorIndexFromClient(GameObject client)
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            if (client == clientNeutral[i] || client == clientOrdering[i] || client == clientHappy[i] || client == clientMad[i])
-            {
-                return i;
-            }
-        }
-        return -1;  // Default fallback (though this should never happen if all models are correctly assigned)
-    }
 }
