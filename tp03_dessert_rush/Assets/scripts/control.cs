@@ -11,6 +11,7 @@ public class control : MonoBehaviour
     public GameObject[] clientMad;      // All mad models
     private int xcount;
     private bool stop;
+    public validation_commande script; 
 
     public GameObject client_actuel;    // The currently active client model (neutral, ordering, happy, or mad)
 
@@ -93,6 +94,8 @@ public class control : MonoBehaviour
         if(stop == false)
         {
             stop = true;
+            script.count++;
+            script.count_yes++;
             StartCoroutine("reussiteCo");
         }
         
@@ -102,7 +105,9 @@ public class control : MonoBehaviour
     {
            if(stop == false)
         {
-            stop = true;    
+            stop = true;
+            script.count++;
+            script.count_no++;
             StartCoroutine("failureCo");
         }
     }
