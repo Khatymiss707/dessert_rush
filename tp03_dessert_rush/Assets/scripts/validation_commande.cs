@@ -9,7 +9,6 @@ public class validation_commande : MonoBehaviour
     public int count_yes = 0;
     public int count_no;
     public int count;
-    public TextMeshProUGUI total;
     public TextMeshProUGUI succes;
     public TextMeshProUGUI fail;
     public GameObject fin;
